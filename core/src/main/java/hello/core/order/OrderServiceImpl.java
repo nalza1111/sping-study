@@ -3,10 +3,12 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
     //private final MemberRepository memberRepository = new MemoryMemberRepository();
@@ -22,12 +24,12 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy  discountPolicy;
 
     //1개일 시 생략가능 (불변)
-    @Autowired
+/*    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         System.out.println("생성자 주입");
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
-    }
+    }*/
     //생성자 => 세터 주입 (싱글톤이기 때문에 같은 타입이 주입)
     //선택, 변경 가능성
     //finsal//finsal
