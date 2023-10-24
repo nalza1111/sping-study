@@ -18,6 +18,7 @@ public class MvcMemberFromServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
 
+
         // => 오 이거 경로 http://localhost:8080/servlet-mvc/members/new-form 뜸! .jsp 안뜸~
         //WEB-INF => 경로 직접쳐서 진입 불가능... 항상 컨트롤러를 타야 부를 수 있음
 
